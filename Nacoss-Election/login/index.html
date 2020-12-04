@@ -15,42 +15,51 @@
     />
   </head>
   <body>
-    <div class="wrapper">
-      <div class="banner"></div>
-      <div class="login-form">
-        <div class="form-area">
-          <h3>login to vote</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
-            ducimus.
-          </p>
-          <form action="../vote/vote.html" method="POST">
-            <!-- MATRIC NUMBER INPUT FIELD -->
-            <label for="matric-number">matric number: </label>
-            <input
-              type="text"
-              placeholder="matric number"
-              id="matric-number"
-              required
-            />
-            <span class="matric-number-error-message"></span>
-            <!-- END OF MATRIC NUMBER INPUT FIELD -->
-            <!-- PASSWORD INPUT FIELD -->
-            <label for="password">password: </label>
-            <input
-              type="password"
-              placeholder="password"
-              id="password"
-              required
-            />
-            <span class="password-error-message"></span>
-            <!-- END OF PASSWORD INPUT FIELD -->
-            <input type="button" value="Submit" class="btn-submit" />
-          </form>
-        </div>
-        <footer>&copy;bellsnacoss 2020/2021</footer>
+    <div class="main-container">
+      <!-- banner section start -->
+      <section class="banner-section"></section>
+      <!-- banner section end -->
+      <div class="login-container">
+        <!-- login section start -->
+        <section class="login-section">
+          <article class="login-section-info">
+            <h1 class="login-section-title">login to vote</h1>
+            <p class="login-section-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
+              minus!
+            </p>
+          </article>
+          <article class="login-section-form">
+            <form action="" class="form-group">
+              <input
+                type="text"
+                name="matric-number"
+                placeholder="matric number"
+                class="form-control"
+                id="matric"
+              />
+              <span class="matric-number-error-message"></span>
+              <input
+                type="password"
+                name="password"
+                placeholder="password"
+                class="form-control"
+                id="password"
+              />
+              <span class="password-error-message"></span>
+              <button type="submit" class="btn-submit">submit</button>
+            </form>
+          </article>
+        </section>
+        <!-- section end -->
+        <!-- footer start -->
+        <footer class="footer">
+          <h3 class="footer-text">&copy; bellsnacoss 2020/2021</h3>
+        </footer>
+        <!-- footer end -->
       </div>
     </div>
+
     <script src="../script.js"></script>
   </body>
 </html>
