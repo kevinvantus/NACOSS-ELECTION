@@ -184,10 +184,41 @@
 }
 /* accordion end */
 
+/* scroll wallpaper start */
+.slider {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.slider::-webkit-scrollbar {
+  display: none;
+}
+.candidate-card {
+  flex: 0 0 auto;
+  margin: 0 1rem 1rem 1rem;
+  opacity: 0.5;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.candidate-card:hover {
+  opacity: 1;
+  margin: 0.5rem 0.5rem;
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+/* scroll wallpaper end */
+
 /* post tile */
 .post-title {
   margin: 1rem auto;
   font-size: 0.85rem;
+  text-align: center;
   letter-spacing: var(--letter-spacing);
   text-transform: uppercase;
   color: var(--dark-blue);
@@ -198,6 +229,8 @@
 /* vote button */
 .vote-btn {
   width: 50%;
+  margin: 0 auto;
+  display: block;
   padding: 0.5rem 0;
   border: none;
   border: 1px solid var(--orange);
@@ -276,7 +309,32 @@
     font-size: 1.35rem;
   }
   .form-group {
-    width: 50%;
+    width: 60%;
+  }
+  .scroll-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  .candidate-card {
+    flex: 0 0 auto;
+    margin: 0.5rem 1rem;
+    opacity: 0.5;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+  }
+  .candidate-card:hover {
+    opacity: 1;
+    transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    -o-transform: scale(1.01);
   }
 }
 
