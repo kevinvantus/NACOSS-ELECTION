@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Poppins:wght@200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&family=Poppins:wght@200;300;400&display=swap");
 
 * {
   margin: 0;
@@ -16,6 +16,25 @@
   --main-transition: all 0.3s ease-in-out;
   scroll-behavior: smooth;
 }
+
+/* globals start */
+.btn {
+  text-transform: uppercase;
+  font-family: var(--secondary-font);
+  color: var(--background-blue);
+  background-color: var(--orange);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+/* globals end */
 
 /* header start */
 .header {
@@ -46,23 +65,9 @@
 }
 .main-btn {
   text-decoration: none;
-  font-family: var(--secondary-font);
-  text-transform: uppercase;
   display: inline-block;
-  color: var(--background-blue);
-  background-color: var(--orange);
   margin-top: 1rem;
-  padding: 0.6rem 2.4rem;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  transition: var(--main-transition);
-  -webkit-transition: var(--main-transition);
-  -moz-transition: var(--main-transition);
-  -ms-transition: var(--main-transition);
-  -o-transition: var(--main-transition);
+  padding: 0.4rem 1rem;
 }
 .main-btn:hover {
   opacity: 0.82;
@@ -119,48 +124,51 @@
 /* accordion start */
 .accordion {
   font-size: 1rem;
-  margin: 0 auto;
+  margin: 0 auto 0.5rem;
   border-radius: 5px;
 }
-.accordion-header,
-.accordion-body {
-  background: white;
-}
+
 .accordion-header {
-  padding: 1.5em 1.5em;
-  background: #3f51b5;
-  color: white;
+  padding: 1.1em 1.5em;
+  background: white;
+  border: 1px solid var(--orange);
+  border-radius: 5px;
+  color: var(--dark-blue);
   cursor: pointer;
-  font-size: 0.7em;
+  font-size: 0.9rem;
   letter-spacing: 0.1em;
-  transition: all 0.3s;
   text-transform: uppercase;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
 }
 .accordion__item {
-  border-bottom: 1px solid #3a4ba4;
-}
-.accordion__item .accordion__item {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 .accordion-header:hover {
-  background: #2d3d99;
   position: relative;
   z-index: 5;
 }
 .accordion-body {
-  background: #fcfcfc;
+  background: var(--background-blue);
   color: #353535;
   display: none;
 }
 .accordion-body__contents {
-  padding: 1.5em 1.5em;
+  padding: 1.5em 0;
   font-size: 0.85em;
 }
 .accordion__item.active:last-child .accordion-header {
   border-radius: none;
 }
 .accordion:first-child > .accordion__item > .accordion-header {
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid var(--orange);
 }
 .accordion__item > .accordion-header:after {
   content: "\f3d0";
@@ -169,18 +177,18 @@
   float: right;
   position: relative;
   top: -2px;
-  transition: 0.3s all;
   transform: rotate(0deg);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
 }
 .accordion__item.active > .accordion-header:after {
   transform: rotate(-180deg);
 }
 .accordion__item.active .accordion-header {
-  background: #2d3d99;
-}
-.accordion__item .accordion__item .accordion-header {
-  background: #f1f1f1;
-  color: #353535;
+  background: var(--background-blue);
 }
 /* accordion end */
 
@@ -195,7 +203,7 @@
 }
 .candidate-card {
   flex: 0 0 auto;
-  margin: 0 1rem 1rem 1rem;
+  margin: 0;
   opacity: 0.5;
   transition: var(--main-transition);
   -webkit-transition: var(--main-transition);
@@ -212,6 +220,16 @@
   -ms-transform: scale(1.05);
   -o-transform: scale(1.05);
 }
+.candidate-card img {
+  display: block;
+  width: 88%;
+  margin: 0 auto;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
 /* scroll wallpaper end */
 
 /* post tile */
@@ -222,7 +240,8 @@
   letter-spacing: var(--letter-spacing);
   text-transform: uppercase;
   color: var(--dark-blue);
-  font-family: var(--secondary-font);
+  font-family: var(--primary-font) !important;
+  font-weight: 800;
 }
 /* post tile end */
 
@@ -235,21 +254,9 @@
   border: none;
   border: 1px solid var(--orange);
   color: var(--dark-blue);
-  text-transform: uppercase;
-  font-family: var(--secondary-font);
   font-weight: bold;
   background-color: white;
-  transition: var(--main-transition);
   letter-spacing: var(--letter-spacing);
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  -webkit-transition: var(--main-transition);
-  -moz-transition: var(--main-transition);
-  -ms-transition: var(--main-transition);
-  -o-transition: var(--main-transition);
 }
 .vote-btn:hover {
   background-color: var(--orange);
@@ -261,24 +268,12 @@
 /* submit button */
 .btn-submit {
   width: 80%;
-  font-family: var(--secondary-font);
-  text-transform: uppercase;
   display: block;
   color: var(--background-blue);
   background-color: var(--orange);
   margin: 3rem auto;
   padding: 0.6rem 2.4rem;
   border: none;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  transition: var(--main-transition);
-  -webkit-transition: var(--main-transition);
-  -moz-transition: var(--main-transition);
-  -ms-transition: var(--main-transition);
-  -o-transition: var(--main-transition);
 }
 .btn-submit:hover {
   opacity: 0.82;
@@ -286,9 +281,24 @@
 }
 /* submit button end */
 
+.img-right {
+  display: none;
+}
 /* CANDIDATES END */
 /* media queries start */
 @media screen and (min-width: 576px) {
+  .header-img {
+    margin-right: 10px;
+  }
+  .banner-title {
+    font-size: 1.35rem;
+  }
+  .form-group {
+    width: 50vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .header {
     width: 100%;
     height: 100vh;
@@ -302,43 +312,6 @@
     width: 50%;
     height: 100vh;
   }
-  .header-img {
-    margin-right: 10px;
-  }
-  .banner-title {
-    font-size: 1.35rem;
-  }
-  .form-group {
-    width: 60%;
-  }
-  .scroll-wrapper {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    overflow-x: scroll;
-    overflow-y: hidden;
-  }
-  .candidate-card {
-    flex: 0 0 auto;
-    margin: 0.5rem 1rem;
-    opacity: 0.5;
-    transition: var(--main-transition);
-    -webkit-transition: var(--main-transition);
-    -moz-transition: var(--main-transition);
-    -ms-transition: var(--main-transition);
-    -o-transition: var(--main-transition);
-  }
-  .candidate-card:hover {
-    opacity: 1;
-    transform: scale(1.01);
-    -webkit-transform: scale(1.01);
-    -moz-transform: scale(1.01);
-    -ms-transform: scale(1.01);
-    -o-transform: scale(1.01);
-  }
-}
-
-@media screen and (min-width: 768px) {
   .banner {
     padding-left: 1.4rem;
   }
@@ -355,4 +328,43 @@
   .header-img {
     margin-right: 0.625rem;
   }
+  .slider::-webkit-scrollbar {
+    display: -webkit-flex;
+  }
+  .accordion-body__contents {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .slider {
+    display: block;
+    width: 100% - calc(100% - 50vw);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .slider > * {
+    margin: 0.3rem 0 1rem;
+    flex: 0 0 32.3333%;
+  }
 }
+
+@media screen and (min-width: 960px) {
+  .candidates {
+    position: relative;
+  }
+  .img-right {
+    display: inline-block;
+    position: absolute;
+    top: 10vh;
+    left: 77%;
+    opacity: 0.15;
+  }
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* accordion start */
+
+/* accordion end */
