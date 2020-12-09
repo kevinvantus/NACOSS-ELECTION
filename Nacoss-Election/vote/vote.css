@@ -15,6 +15,7 @@
   --letter-spacing: 1px;
   --main-transition: all 0.3s ease-in-out;
   scroll-behavior: smooth;
+  background-color: var(--background-blue);
 }
 
 /* globals start */
@@ -80,7 +81,7 @@
   width: 90vw;
   height: 50vh;
   background-image: url(../images/Asset-2.png);
-  background-position: center;
+  background-position: 0 20%;
   background-size: contain;
   background-repeat: no-repeat;
   background-origin: border-box;
@@ -91,7 +92,8 @@
 
 /* content divider */
 .content-divider {
-  height: 0.5rem;
+  height: 1rem;
+  background-color: white;
 }
 /* CANDIDATES START */
 .candidates {
@@ -149,6 +151,7 @@
   -o-transition: var(--main-transition);
 }
 .accordion__item {
+  margin-bottom: 0.5rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 .accordion-header:hover {
@@ -203,22 +206,12 @@
 }
 .candidate-card {
   flex: 0 0 auto;
-  margin: 0;
-  opacity: 0.5;
+  margin: 0 auto;
   transition: var(--main-transition);
   -webkit-transition: var(--main-transition);
   -moz-transition: var(--main-transition);
   -ms-transition: var(--main-transition);
   -o-transition: var(--main-transition);
-}
-.candidate-card:hover {
-  opacity: 1;
-  margin: 0.5rem 0.5rem;
-  transform: scale(1.05);
-  -webkit-transform: scale(1.05);
-  -moz-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  -o-transform: scale(1.05);
 }
 .candidate-card img {
   display: block;
@@ -320,7 +313,7 @@
     font-weight: 700;
   }
   .banner-subtitle {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .main-btn {
     padding: 1rem 3rem;
@@ -328,24 +321,22 @@
   .header-img {
     margin-right: 0.625rem;
   }
-  .slider::-webkit-scrollbar {
-    display: -webkit-flex;
+  .content-divider {
+    background-color: white;
   }
-  .accordion-body__contents {
-    width: 100%;
-    margin: 0 auto;
+  .candidates {
+    min-height: 100vh;
   }
   .slider {
     display: block;
-    width: 100% - calc(100% - 50vw);
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
   }
 
   .slider > * {
-    margin: 0.3rem 0 1rem;
-    flex: 0 0 32.3333%;
+    margin: 0.3rem auto 1rem;
+    flex: 0 0 30.3333%;
   }
 }
 
@@ -356,15 +347,12 @@
   .img-right {
     display: inline-block;
     position: absolute;
-    top: 10vh;
+    top: 10%;
     left: 77%;
     opacity: 0.15;
   }
   body {
     overflow-x: hidden;
+    position: relative;
   }
 }
-
-/* accordion start */
-
-/* accordion end */
